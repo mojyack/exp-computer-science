@@ -53,7 +53,7 @@ auto main(const int argc, const char* const argv[]) -> int {
         return 1;
     }
 
-    constexpr auto step  = 100; // you can increase this for accuracy
+    constexpr auto step  = 1000; // you can increase this for accuracy
     const auto&    f     = functions[n];
     const auto&    range = f.range;
     for(auto i = 0; i <= step; i += 1) {
