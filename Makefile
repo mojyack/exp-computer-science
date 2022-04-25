@@ -1,4 +1,4 @@
-CXX = clang++ -pipe -O3 -march=native -mrtm -std=c++20
+CXX = clang++ -pipe -O3 -std=c++20
 
 all: out/1 out/2 out/3 out/4 out/5 out/6 out/7 out/8 out/9 out/10 out/11 out/12 out/13 out/14 out/15 out/16 out/18 out/24
 
