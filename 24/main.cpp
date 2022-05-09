@@ -5,8 +5,8 @@
 
 using Planet = std::array<std::array<double, 2>, 3>; // [0] position, [1] velocity, [2] acceleration
 
-constexpr auto timestep   = double(0.01);
-constexpr auto total_time = 500;
+constexpr auto timestep   = double(0.0001);
+constexpr auto total_time = 50;
 
 auto kepler(Planet& planet, const double t) -> int {
     const auto r = std::sqrt(std::pow(planet[0][0], 2) + std::pow(planet[0][1], 2));
@@ -111,8 +111,8 @@ auto main(const int argc, const char* const argv[]) -> int {
     } else if(std::strcmp(argv[1], "runge") == 0) {
         auto planet = init;
         for(auto i = 0; i < total_time / timestep; i += 1) {
-            runge(planet, i * timestep, kepler);
             println(planet[0][0], " ", planet[0][1]);
+            runge(planet, i * timestep, kepler);
         }
     } else {
         println("unknown method");
