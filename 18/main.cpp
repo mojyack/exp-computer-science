@@ -13,22 +13,22 @@ auto main(const int argc, const char* const argv[]) -> int {
     };
 
     const static auto functions = std::array<Function, 6>{
-        {{"e^(-x^2) [-3, +3]", {-3, 3}, [](const double x) -> double {
+        {{"e^(-x^2) [-3:+3]", {-3, 3}, [](const double x) -> double {
               return std::pow(std::numbers::e, -std::pow(x, 2));
           }},
-         {"sin(x)/x [-3*pi, +3*pi]", {-3 * std::numbers::pi, 3 * std::numbers::pi}, [](const double x) -> double {
+         {"sin(x)/x [-3*pi:+3*pi]", {-3 * std::numbers::pi, 3 * std::numbers::pi}, [](const double x) -> double {
               return std::sin(x) / x;
           }},
-         {"x*x(x-1) [0, 1]", {0, 1}, [](const double x) -> double {
+         {"x*x(x-1) [0:1]", {0, 1}, [](const double x) -> double {
               return x * (x - 1);
           }},
-         {"1/(1+x^2) [-2 2]", {-2, 2}, [](const double x) -> double {
+         {"1/(1+x^2) [-2:2]", {-2, 2}, [](const double x) -> double {
               return 1.0 / (1 + x * x);
           }},
-         {"x^5 [-1, 1]", {-1, 1}, [](const double x) -> double {
+         {"x^5 [-1:1]", {-1, 1}, [](const double x) -> double {
               return x * x * x * x * x;
           }},
-         {"sqrt(1-x^2) [-1 1]", {-1, 1}, [](const double x) -> double {
+         {"sqrt(1-x^2) [-1:1]", {-1, 1}, [](const double x) -> double {
               return std::sqrt(1.0 - x * x);
           }}}};
 
