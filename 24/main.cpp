@@ -99,14 +99,14 @@ auto main(const int argc, const char* const argv[]) -> int {
     if(std::strcmp(argv[1], "euler") == 0) {
         auto planet = init;
         for(auto i = 0; i < total_time / timestep; i += 1) {
-            euler(planet, i * timestep, kepler);
             println(planet[0][0], " ", planet[0][1]);
+            euler(planet, i * timestep, kepler);
         }
     } else if(std::strcmp(argv[1], "meuler") == 0) {
         auto planet = init;
         for(auto i = 0; i < total_time / timestep; i += 1) {
-            meuler(planet, i * timestep, kepler);
             println(planet[0][0], " ", planet[0][1]);
+            meuler(planet, i * timestep, kepler);
         }
     } else if(std::strcmp(argv[1], "runge") == 0) {
         auto planet = init;
